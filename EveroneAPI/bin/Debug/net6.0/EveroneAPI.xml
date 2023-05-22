@@ -1,0 +1,587 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EveroneAPI</name>
+    </assembly>
+    <members>
+        <member name="T:EveroneAPI.Comoon.CrudMethod`1">
+            <summary>
+            增删查改公共方法
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:EveroneAPI.Comoon.CrudMethod`1.Insert(`0)">
+            <summary>
+            增加一行数据
+            </summary>
+            <param name="t">数据实体</param>
+            <returns>操作结果</returns>
+        </member>
+        <member name="M:EveroneAPI.Comoon.CrudMethod`1.SelectData(EveroneAPI.ContextDB.ContextDBs,EveroneAPI.Models.SelectParam)">
+            <summary>
+            查询数据（只返回查询结果）
+            </summary>
+            <param name="sp">查询参数</param>
+            <param name="order">排序条件</param>
+            <param name="isDesc">是否降序排列</param>
+            <param name="context">数据库上下文</param>
+            <returns>查询结果</returns>
+        </member>
+        <member name="T:EveroneAPI.Comoon.ExcelHelper">
+            <summary>
+            Excel操作类
+            </summary>
+        </member>
+        <member name="M:EveroneAPI.Comoon.ExcelHelper.GetFilePaht(System.String)">
+            <summary>
+            获取文件完整路径（程序根目录\ExcelRecord\年\月\日\文件.xlsx）
+            </summary>
+            <param name="FileName">文件名（已包含后缀名）</param>
+            <returns></returns>
+        </member>
+        <member name="M:EveroneAPI.Comoon.ExcelHelper.SendExcel(System.String)">
+            <summary>
+            将Excel发送至前端
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EveroneAPI.Comoon.ExcelHelper.TranSpecialType(System.Object,EveroneAPI.Comoon.ExcelHelper.SpecialType)">
+            <summary>
+            将特殊类型转换成中文（例如将0、1转换成NG、OK）
+            </summary>
+            <param name="param">待转换数值</param>
+            <param name="type">特殊类型</param>
+            <returns></returns>
+        </member>
+        <member name="M:EveroneAPI.Comoon.ExcelHelper.TranSpecialTypeReverse(System.String,EveroneAPI.Comoon.ExcelHelper.SpecialType)">
+            <summary>
+            将中文转换成特殊类型（例如将NG、OK转换成0、1）
+            </summary>
+            <param name="param">待转换数值</param>
+            <param name="type">特殊类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:EveroneAPI.Comoon.ExcelHelper.SpecialType">
+            <summary>
+            特殊类型处理枚举
+            </summary>
+        </member>
+        <member name="F:EveroneAPI.Comoon.ExcelHelper.SpecialType.报警信息处理状态">
+            bool类型，0表示未处理,1表示已处理
+        </member>
+        <member name="F:EveroneAPI.Comoon.ExcelHelper.SpecialType.复杂结果类型">
+            int类型，0表示NC未完成，1表示OK，2表示NG
+        </member>
+        <member name="F:EveroneAPI.Comoon.ExcelHelper.SpecialType.控制方式">
+            int类型，0表示力矩控制,1表示角度控制,默认为0
+        </member>
+        <member name="F:EveroneAPI.Comoon.ExcelHelper.SpecialType.结果类型">
+            int类型，0表示NG，1表示OK 
+        </member>
+        <member name="F:EveroneAPI.Comoon.ExcelHelper.SpecialType.工位类型">
+            int类型，0表示手动工位，1表示自动工位
+        </member>
+        <member name="F:EveroneAPI.Comoon.ExcelHelper.SpecialType.日志类型">
+            int类型，0表示操作日志,1表示系统日志
+        </member>
+        <member name="M:EveroneAPI.Comoon.ExcelHelper.ToDateTimeValue(System.String)">
+            <summary>
+            Excel数字类型时间转换成标准时间格式
+            </summary>
+            <param name="strNumber">数字,如:42095.7069444444/0.650694444444444</param>
+            <returns>日期/时间格式</returns>
+        </member>
+        <member name="M:EveroneAPI.Comoon.ExcelHelper.GetEngineTighteningDic">
+            获取发动机拧紧数据中英文列名对照表
+        </member>
+        <member name="M:EveroneAPI.Comoon.ExcelHelper.GetEngineTighteningTypeDic">
+            <summary>
+            获取发动机拧紧数据特殊列中英文列名对照表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EveroneAPI.Comoon.IQRCode">
+            <summary>
+            二维码生成接口
+            </summary>
+        </member>
+        <member name="M:EveroneAPI.Comoon.RaffQRCode.GetQRCode(EveroneAPI.Models.File.QRCodes)">
+            <summary>
+            二维码
+            </summary>
+            <param name="url">存储内容</param>
+            <param name="pixel">像素大小</param>
+            <returns></returns>
+        </member>
+        <member name="P:EveroneAPI.ContextDB.Models.Demand.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.ContextDB.Models.Demand.User">
+            <summary>
+            发布用户
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.ContextDB.Models.Demand.datatime">
+            <summary>
+            时间
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.ContextDB.Models.Demand.theme">
+            <summary>
+            主题
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.ContextDB.Models.Demand.Tranprice">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.ContextDB.Models.Demand.imagesrc">
+            <summary>
+            图片地址
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.ContextDB.Models.Demand.Transactor">
+            <summary>
+            成交人
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.ContextDB.Models.Demand.order">
+            <summary>
+            订单号
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.ContextDB.Models.Demand.price">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.ContextDB.Models.shoping.Url">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.ContextDB.Models.shoping.Classification">
+            <summary>
+            分类
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.ContextDB.Models.shoping.title">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.ContextDB.Models.shoping.details">
+            <summary>
+            详情
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.ContextDB.Models.shoping.Price">
+            <summary>
+            价格
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.ContextDB.Models.shoping.Discount">
+            <summary>
+            折扣
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.ContextDB.Models.shoping.Number">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="T:EveroneAPI.Models.File.OutPut">
+            <summary>
+            返回输出类
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.File.OutPut.Code">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.File.OutPut.Msg">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.File.OutPut.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.File.OutPut.Data">
+            <summary>
+            返回数据
+            </summary>
+        </member>
+        <member name="T:EveroneAPI.Models.File.ImagesDto">
+            <summary>
+            接收参数Dto
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.File.ImagesDto.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.File.ImagesDto.Url">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.File.ImagesDto.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="T:EveroneAPI.Models.OperateResult">
+            <summary>
+            操作结果类
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.OperateResult.Success">
+            <summary>
+            操作结果
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.OperateResult.TotalCount">
+            <summary>
+            查询出的数据总数（查询条件筛选后、分页之前）
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.OperateResult.Describe">
+            <summary>
+            操作结果描述（操作成功/失败的原因）
+            </summary>
+        </member>
+        <member name="T:EveroneAPI.Models.OperateResult`1">
+            <summary>
+            操作结果类
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:EveroneAPI.Models.OperateResult`1.Data">
+            <summary>
+            操作返回的数据(分页后的)
+            </summary>
+        </member>
+        <member name="T:EveroneAPI.Models.SelectParam">
+            <summary>
+            查询参数基类
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.SelectParam.PageSize">
+            <summary>
+            每页显示多少条数据
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.SelectParam.PageIndex">
+            <summary>
+            当前显示第几页
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.SelectParam.MaxCount">
+            <summary>
+            每次最大查询行数，为0则表示不限制
+            </summary>
+        </member>
+        <member name="T:EveroneAPI.Models.CodeFrameSelectParam">
+            <summary>
+            增加了号码段查询的查询参数类
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.CodeFrameSelectParam.FeatureCode">
+            <summary>
+            特征码--发动机号前5位，副车架号前13位
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.CodeFrameSelectParam.CodeFrame">
+            <summary>
+            查询号码段--发动机号后7位，副车架号后4位
+            </summary>
+        </member>
+        <member name="T:EveroneAPI.Models.ReturnModel">
+            <summary>
+            返回类
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.ReturnModel.Code">
+            <summary>
+            返回码
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.ReturnModel.Msg">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.ReturnModel.Data">
+            <summary>
+            数据
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.ReturnModel.TnToken">
+            <summary>
+            Token信息
+            </summary>
+        </member>
+        <member name="T:EveroneAPI.Models.User.UserModel">
+             <summary>
+            用户
+             </summary>
+        </member>
+        <member name="T:EveroneAPI.Models.User.RoleModel">
+             <summary>
+            角色名字
+             </summary>
+        </member>
+        <member name="T:EveroneAPI.Models.User.UserTokenModel">
+             <summary>
+            用户，token
+             </summary>
+        </member>
+        <member name="T:EveroneAPI.Models.User.UserRoleModel">
+             <summary>
+            用户，角色
+             </summary>
+        </member>
+        <member name="T:EveroneAPI.Models.User.PowerModel">
+             <summary>
+            功能
+             </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.User.PowerLinkModel.LinkId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.User.PowerLinkModel.MapClassId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.User.PowerLinkModel.MapId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.User.PowerLinkModel.PowerId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EveroneAPI.Models.UserDto">
+            <summary>
+            登录类Dto
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.UserDto.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.UserDto.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="M:EveroneAPI.Controllers.FileUpController.FileUp">
+            <summary>
+            文件上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EveroneAPI.Controllers.LoginTestController.#ctor(EveroneAPI.jwt.ITokenHelper,EveroneAPI.ContextDB.ContextDBs)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="_tokenHelper"></param>
+        </member>
+        <member name="M:EveroneAPI.Controllers.LoginTestController.Login(EveroneAPI.Models.UserDto)">
+            <summary>
+            登录测试
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EveroneAPI.Controllers.LoginTestController.ValiToken(System.String)">
+            <summary>
+            验证Token
+            </summary>
+            <param name="tokenStr">token</param>
+            <returns></returns>
+        </member>
+        <member name="M:EveroneAPI.Controllers.LoginTestController.ValiTokenState(System.String)">
+            <summary>
+            验证Token 带返回状态
+            </summary>
+            <param name="tokenStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EveroneAPI.Controllers.QRCodeController.QRCodeEncoderUtil(EveroneAPI.Models.File.QRCodes)">
+            <summary> 
+            生成二维码 
+            </summary> 
+            <returns>返回二维码base64用于前端展示</returns> 
+        </member>
+        <member name="M:EveroneAPI.Controllers.UserController.CreateUser(EveroneAPI.Models.UserDto)">
+            <summary>
+            创建用户
+            </summary>
+            <param name="user">用户信息</param>
+            <returns>返回结果</returns>
+        </member>
+        <member name="T:EveroneAPI.jwt.ITokenHelper">
+            <summary>
+            token工具类的接口，方便使用依赖注入，很简单提供两个常用的方法
+            </summary>
+        </member>
+        <member name="M:EveroneAPI.jwt.ITokenHelper.CreateToken``1(``0)">
+            <summary>
+            根据一个对象通过反射提供负载生成token
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EveroneAPI.jwt.ITokenHelper.CreateToken(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            根据键值对提供负载生成token
+            </summary>
+            <param name="keyValuePairs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EveroneAPI.jwt.ITokenHelper.ValiToken(System.String,System.Func{System.Collections.Generic.Dictionary{System.String,System.String},System.Boolean})">
+            <summary>
+            Token验证
+            </summary>
+            <param name="encodeJwt">token</param>
+            <param name="validatePayLoad">自定义各类验证； 是否包含那种申明，或者申明的值</param>
+            <returns></returns>
+        </member>
+        <member name="M:EveroneAPI.jwt.ITokenHelper.ValiTokenState(System.String,System.Func{System.Collections.Generic.Dictionary{System.String,System.String},System.Boolean},System.Action{System.Collections.Generic.Dictionary{System.String,System.String}})">
+            <summary>
+            带返回状态的Token验证
+            </summary>
+            <param name="encodeJwt">token</param>
+            <param name="validatePayLoad">自定义各类验证； 是否包含那种申明，或者申明的值</param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EveroneAPI.jwt.JWTConfig">
+            <summary>
+            配置token生成信息
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.jwt.JWTConfig.Issuer">
+            <summary>
+            Token发布者
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.jwt.JWTConfig.Audience">
+            <summary>
+            oken接受者
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.jwt.JWTConfig.IssuerSigningKey">
+            <summary>
+            秘钥
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.jwt.JWTConfig.AccessTokenExpiresMinutes">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="T:EveroneAPI.jwt.TnToken">
+            <summary>
+            存放Token 跟过期时间的类
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.jwt.TnToken.TokenStr">
+            <summary>
+            token
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.jwt.TnToken.Expires">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="T:EveroneAPI.jwt.TokenHelper">
+            <summary>
+            Token生成类
+            </summary>
+        </member>
+        <member name="M:EveroneAPI.jwt.TokenHelper.CreateToken``1(``0)">
+            <summary>
+            根据一个对象通过反射提供负载生成token
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EveroneAPI.jwt.TokenHelper.CreateToken(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            根据键值对提供负载生成token
+            </summary>
+            <param name="keyValuePairs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EveroneAPI.jwt.TokenHelper.CreateTokenString(System.Collections.Generic.List{System.Security.Claims.Claim})">
+            <summary>
+            生成token
+            </summary>
+            <param name="claims">List的 Claim对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:EveroneAPI.jwt.TokenHelper.ValiToken(System.String,System.Func{System.Collections.Generic.Dictionary{System.String,System.String},System.Boolean})">
+            <summary>
+            验证身份 验证签名的有效性
+            </summary>
+            <param name="encodeJwt"></param>
+            <param name="validatePayLoad">自定义各类验证； 是否包含那种申明，或者申明的值， </param>
+        </member>
+        <member name="M:EveroneAPI.jwt.TokenHelper.ToUnixEpochDate(System.DateTime)">
+            <summary>
+            时间转换
+            </summary>
+            <param name="date"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EveroneAPI.jwt.TokenHelper.ValiTokenState(System.String,System.Func{System.Collections.Generic.Dictionary{System.String,System.String},System.Boolean},System.Action{System.Collections.Generic.Dictionary{System.String,System.String}})">
+            <summary>
+            
+            </summary>
+            <param name="encodeJwt"></param>
+            <param name="validatePayLoad"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="P:EveroneAPI.test.SelectOFFManagerRequest.EngineCode">
+            <summary>
+            发动机编码
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.test.SelectOFFManagerRequest.EngineType">
+            <summary>
+            发动机类型
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.test.SelectOFFManagerRequest.BatchName">
+            <summary>
+            批次
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.test.SelectOFFManagerRequest.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+    </members>
+</doc>

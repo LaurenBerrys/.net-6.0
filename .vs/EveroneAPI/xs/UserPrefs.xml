@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{188B74D8-CD77-4CE1-A0A1-209BE6AD808E}|EveronAPI">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="EveroneAPI/Comoon/RaffQRCode.cs">
+    <Files>
+      <File FileName="EveroneAPI/Comoon/RaffQRCode.cs" Line="3" Column="14" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="EveroneAPI" expanded="True">
+            <Node name="EveroneAPI" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" selected="True" />
+              </Node>
+              <Node name="Comoon" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.EveroneAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>
