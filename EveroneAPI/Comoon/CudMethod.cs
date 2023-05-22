@@ -45,11 +45,7 @@ namespace EveroneAPI.Comoon
                 }
                 return or;
         }
-        /// <summary>
-        /// 批量新增数据
-        /// </summary>
-        /// <param name="t"></param>
-        /// <returns></returns>
+    
         //public static OperateResult InsertAll(T[] t)
         //{
         //    using (AE1RFIDSysDBEntities context = new AE1RFIDSysDBEntities())
@@ -75,11 +71,6 @@ namespace EveroneAPI.Comoon
         //}
         #endregion
         #region 删
-        /// <summary>
-        /// 删除一行数据
-        /// </summary>
-        /// <param name="id">需要删除的数据的ID</param>
-        /// <returns></returns>
         //public static OperateResult Delete(int[] id)
         //{
         // using (AE1RFIDSysDBEntities context = new AE1RFIDSysDBEntities())
@@ -115,11 +106,6 @@ namespace EveroneAPI.Comoon
         //        return or;
         //    }
         //}
-        /// <summary>
-        /// 删除一行数据（字符串数组重载）
-        /// </summary>
-        /// <param name="id">需要删除的数据的ID</param>
-        /// <returns></returns>
         //public static OperateResult Delete(string[] id)
         //{
         //    using (AE1RFIDSysDBEntities context = new AE1RFIDSysDBEntities())
@@ -159,13 +145,7 @@ namespace EveroneAPI.Comoon
         //}
         #endregion
         #region 查
-        /// <summary>
-        /// 查询数据
-        /// </summary>
-        /// <param name="sp">查询参数</param>
-        /// <param name="order">排序条件</param>
-        /// <param name="isDesc">是否降序排列</param>
-        /// <returns></returns>
+  
         //public static OperateResult<T> Select(SelectParam sp)
         //{
         //    using (AE1RFIDSysDBEntities context = new AE1RFIDSysDBEntities())
@@ -210,8 +190,6 @@ namespace EveroneAPI.Comoon
         /// 查询数据（只返回查询结果）
         /// </summary>
         /// <param name="sp">查询参数</param>
-        /// <param name="order">排序条件</param>
-        /// <param name="isDesc">是否降序排列</param>
         /// <param name="context">数据库上下文</param>
         /// <returns>查询结果</returns>
         public static List<T> SelectData(ContextDBs context, SelectParam sp)
@@ -265,14 +243,6 @@ namespace EveroneAPI.Comoon
             }
             return tempList;
         }
-        /// <summary>
-        ///  查询大量数据（只返回查询结果）
-        /// </summary>
-        /// <param name="where">查询条件lambda</param>
-        /// <param name="order">排序条件</param>
-        /// <param name="sp">查询参数</param>
-        /// <param name="totalCount">数据总量</param>
-        /// <returns></returns>
         //public static List<T> SelectData(System.Linq.Expressions.Expression<Func<T, bool>> where, System.Linq.Expressions.Expression<Func<T, int>> order, SelectParam sp, out int totalCount)
         //{
         //    using (AE1RFIDSysDBEntities context = new AE1RFIDSysDBEntities())
@@ -310,14 +280,7 @@ namespace EveroneAPI.Comoon
         //        return l.ToList();
         //    }
         //}
-        /// <summary>
-        ///  查询大量数据（只返回查询结果）多条件
-        /// </summary>
-        /// <param name="wheres">查询条件lambda集合</param>
-        /// <param name="order">排序条件</param>
-        /// <param name="sp">查询参数</param>
-        /// <param name="totalCount">数据总量</param>
-        /// <returns></returns>
+
         //public static List<T> SelectData(List<System.Linq.Expressions.Expression<Func<T, bool>>> wheres, System.Linq.Expressions.Expression<Func<T, int>> order, SelectParam sp, out int totalCount)
         //{
         //    using (AE1RFIDSysDBEntities context = new AE1RFIDSysDBEntities())
@@ -355,15 +318,8 @@ namespace EveroneAPI.Comoon
         //        return l.ToList();
         //    }
         //}
-        /// <summary>
-        ///  查询大量数据（只返回查询结果）多条件  号码段
-        /// </summary>
-        /// <param name="wheres">查询条件lambda集合</param>
-        /// <param name="order">排序条件</param>
-        /// <param name="sp">查询参数</param>
-        /// <param name="codeColName">号码段的字段名称（发动机号，缸盖号还是副车架号  英文）</param>
-        /// <param name="totalCount">数据总量</param>
-        /// <returns></returns>
+        //  查询大量数据（只返回查询结果）多条件  号码段
+        //查询条件lambda集合
         //public static List<T> SelectData(List<System.Linq.Expressions.Expression<Func<T, bool>>> wheres, System.Linq.Expressions.Expression<Func<T, int>> order, CodeFrameSelectParam sp, string codeColName, out int totalCount)
         //{
         //    using (AE1RFIDSysDBEntities context = new AE1RFIDSysDBEntities())
@@ -419,14 +375,7 @@ namespace EveroneAPI.Comoon
         //        return l.ToList();
         //    }
         //}
-        /// <summary>
-        ///  查询大量数据（只返回查询结果）
-        /// </summary>
-        /// <param name="wheres">查询条件lambda集合</param>
-        /// <param name="order">排序条件</param>
-        /// <param name="sp">查询参数</param>
-        /// <param name="totalCount">数据总量</param>
-        /// <returns></returns>
+
         //public static List<T> SelectSubFrameData(List<Expression<Func<T, bool>>> wheres, System.Linq.Expressions.Expression<Func<T, int>> order, CodeFrameSelectParam sp, string codeColName, out int totalCount)
         //{
         //    using (QLNavDBEntities context = new QLNavDBEntities())
@@ -484,11 +433,6 @@ namespace EveroneAPI.Comoon
         //}
         #endregion
         #region 改
-        /// <summary>
-        /// 修改一行数据
-        /// </summary>
-        /// <param name="t">数据实体</param>
-        /// <returns>操作结果</returns>
         //public static OperateResult Update(T t)
         //{
         //    using (AE1RFIDSysDBEntities context = new AE1RFIDSysDBEntities())
@@ -511,11 +455,7 @@ namespace EveroneAPI.Comoon
         //        return or;
         //    }
         //}
-        /// <summary>
-        /// 批量修改数据
-        /// </summary>
-        /// <param name="t">待修改的数据集合</param>
-        /// <returns></returns>
+  
         //public static OperateResult UpdateAll(T[] t)
         //{
         //    using (AE1RFIDSysDBEntities context = new AE1RFIDSysDBEntities())

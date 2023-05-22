@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using EveroneAPI.NvapVue;
 
 namespace EveroneAPI.Controllers
 {
@@ -32,34 +33,30 @@ namespace EveroneAPI.Controllers
             var ret = new ReturnModel();
             try
             {
-              
-
-                if (string.IsNullOrWhiteSpace(user.UserName) || string.IsNullOrWhiteSpace(user.Password))
+                if (string.IsNullOrWhiteSpace(user.name) || string.IsNullOrWhiteSpace(user.password) || string.IsNullOrWhiteSpace(user.repassed))
                 {
                     ret.Code = 201;
                     ret.Msg = "用户名密码不能为空";
                     return ret;
-                }
-
-
-
-                    else
+                }else
                 {
-
-                    var users = new UserInfo()
-                            {
-                                UserName=user.UserName,
-                                UserPwd = user.Password,
-                            };
-                            db.UserInfo.Add(users);
+                    if (user.repassed != user.password)
+                    {
+                        ret.Code = 400;
+                        ret.Msg = "两次密码不一致";
+                        return ret;
+                    }
+                    var users = new Users()
+                          {
+                           name = user.name,
+                           password=user.password
+                           };
+                            db.Users.Add(users);
                             db.SaveChanges();
                             ret.Code = 200;
                             ret.Msg = "用户注册成功";
-   
                         return ret;
-
                     }
-               
             }
             catch (Exception)
             {

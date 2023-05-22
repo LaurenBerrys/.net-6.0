@@ -10,12 +10,11 @@ using System.Threading.Tasks;
 namespace EveroneAPI.Comoon
 {
     public class RaffQRCode : IQRCode
-    { /// <summary>
-      /// 二维码
-      /// </summary>
-      /// <param name="url">存储内容</param>
-      /// <param name="pixel">像素大小</param>
-      /// <returns></returns>
+    {
+        /// <summary>
+        /// 二维码
+        /// </summary>
+        /// <returns></returns>
         public Bitmap GetQRCode([FromBody]QRCodes qR)
         {
             QRCodeGenerator generator = new QRCodeGenerator();

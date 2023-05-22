@@ -25,15 +25,26 @@ namespace EveroneAPI.Controllers
              
             db = _db;
         }
+        /// <summary>
+        /// 获取奶茶图片
+        /// </summary>
+        /// <param name="access_token"></param>
+        /// <returns></returns>
         //获取奶茶图片
-        [HttpPost]
+        [HttpPost("shopingimage")]
         public IEnumerable<shoping> Shopingimag(string access_token)
         {
-            return db.shoping.ToList();
-
+            //return db.shoping.ToList();
+            return null;
         }
+        /// <summary>
+        /// 购买奶茶
+        /// </summary>
+        /// <param name="access_token"></param>
+        /// <param name="buy"></param>
+        /// <returns></returns>
         //购买奶茶
-        [HttpPost]
+        [HttpPost("Buy")]
         public ReturnModel Buy(string? access_token,[FromBody]Buy buy)
         {
             var ret = new ReturnModel();
@@ -46,8 +57,8 @@ namespace EveroneAPI.Controllers
                 Price=buy.Price,
                 temperature=buy.temperature
             };
-            db.Buy.Add(data);
-            db.SaveChanges();
+            //db.Buy.Add(data);
+            //db.SaveChanges();
             ret.Code = 200;
             ret.Msg = "购买成功";
 

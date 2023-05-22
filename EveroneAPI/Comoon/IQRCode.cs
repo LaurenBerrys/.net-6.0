@@ -14,6 +14,5 @@ namespace EveroneAPI.Comoon
     public interface IQRCode
     {
         Bitmap GetQRCode( [FromBody]QRCodes qRCoder);
-       
     }
 }

@@ -1,25 +1,25 @@
 ﻿<Properties StartupConfiguration="{188B74D8-CD77-4CE1-A0A1-209BE6AD808E}|EveronAPI">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="EveroneAPI/Comoon/RaffQRCode.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.Workbench ActiveDocument="EveroneAPI/Comoon/IQRCode.cs">
     <Files>
-      <File FileName="EveroneAPI/Comoon/RaffQRCode.cs" Line="3" Column="14" />
+      <File FileName="EveroneAPI/Comoon/IQRCode.cs" Line="18" Column="6" />
+      <File FileName="EveroneAPI/Startup.cs" Line="64" Column="40" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="EveroneAPI" expanded="True">
             <Node name="EveroneAPI" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" selected="True" />
-              </Node>
+              <Node name="Dependencies" expanded="True" />
               <Node name="Comoon" expanded="True" />
             </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

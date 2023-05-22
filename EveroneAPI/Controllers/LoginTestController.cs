@@ -26,6 +26,7 @@ namespace EveroneAPI.Controllers
         /// 构造函数
         /// </summary>
         /// <param name="_tokenHelper"></param>
+        /// <param name="_db"></param>
         public LoginTestController(ITokenHelper _tokenHelper, ContextDBs _db)
         {
             tokenHelper = _tokenHelper;
@@ -45,24 +46,24 @@ namespace EveroneAPI.Controllers
             var ret = new ReturnModel();
             try
             {
-                if (string.IsNullOrWhiteSpace(user.UserName) || string.IsNullOrWhiteSpace(user.Password))
+                if (string.IsNullOrWhiteSpace(user.name) || string.IsNullOrWhiteSpace(user.password))
                 {
                     ret.Code = 201;
                     ret.Msg = "用户名密码不能为空";
                     return ret;
                 }
-                    var usess = db.UserInfo.ToList().FirstOrDefault(P=>P.UserName.Equals(user.UserName)&&P.UserPwd.Equals(user.Password));
-                if (usess!=null)
-                {
-                    Dictionary<string, string> keyValuePairs = new Dictionary<string, string>
-                    {
-                        { "UserName", user.UserName }
-                    };
-                    ret.Code = 200;
-                    ret.Msg = "登录成功";
-                    ret.TnToken = tokenHelper.CreateToken(keyValuePairs);
+                //    var usess = db.UserInfo.ToList().FirstOrDefault(P=>P.UserName.Equals(user.UserName)&&P.UserPwd.Equals(user.Password));
+                //if (usess!=null)
+                //{
+                //    Dictionary<string, string> keyValuePairs = new Dictionary<string, string>
+                //    {
+                //        { "UserName", user.UserName }
+                //    };
+                //    ret.Code = 200;
+                //    ret.Msg = "登录成功";
+                //    ret.TnToken = tokenHelper.CreateToken(keyValuePairs);
 
-                }
+                //}
             }
             catch (Exception ex)
             {

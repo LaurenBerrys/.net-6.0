@@ -22,8 +22,6 @@
             查询数据（只返回查询结果）
             </summary>
             <param name="sp">查询参数</param>
-            <param name="order">排序条件</param>
-            <param name="isDesc">是否降序排列</param>
             <param name="context">数据库上下文</param>
             <returns>查询结果</returns>
         </member>
@@ -110,8 +108,6 @@
             <summary>
             二维码
             </summary>
-            <param name="url">存储内容</param>
-            <param name="pixel">像素大小</param>
             <returns></returns>
         </member>
         <member name="P:EveroneAPI.ContextDB.Models.Demand.UserID">
@@ -380,14 +376,19 @@
             登录类Dto
             </summary>
         </member>
-        <member name="P:EveroneAPI.Models.UserDto.UserName">
+        <member name="P:EveroneAPI.Models.UserDto.name">
             <summary>
             用户名
             </summary>
         </member>
-        <member name="P:EveroneAPI.Models.UserDto.Password">
+        <member name="P:EveroneAPI.Models.UserDto.password">
             <summary>
             密码
+            </summary>
+        </member>
+        <member name="P:EveroneAPI.Models.UserDto.repassed">
+            <summary>
+            确认密码
             </summary>
         </member>
         <member name="M:EveroneAPI.Controllers.FileUpController.FileUp">
@@ -396,11 +397,27 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:EveroneAPI.Controllers.GetShopingController.Shopingimag(System.String)">
+            <summary>
+            获取奶茶图片
+            </summary>
+            <param name="access_token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EveroneAPI.Controllers.GetShopingController.Buy(System.String,EveroneAPI.ContextDB.Models.Buy)">
+            <summary>
+            购买奶茶
+            </summary>
+            <param name="access_token"></param>
+            <param name="buy"></param>
+            <returns></returns>
+        </member>
         <member name="M:EveroneAPI.Controllers.LoginTestController.#ctor(EveroneAPI.jwt.ITokenHelper,EveroneAPI.ContextDB.ContextDBs)">
             <summary>
             构造函数
             </summary>
             <param name="_tokenHelper"></param>
+            <param name="_db"></param>
         </member>
         <member name="M:EveroneAPI.Controllers.LoginTestController.Login(EveroneAPI.Models.UserDto)">
             <summary>

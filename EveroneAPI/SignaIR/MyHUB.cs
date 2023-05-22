@@ -33,8 +33,8 @@ namespace JWT
         {
             public static IEnumerable<shoping> ShopingList(ContextDBs db)
             {
-                var sa = db.shoping.ToList();
-                return sa;
+                //var sa = db.shoping.ToList();
+                return null;
             }
         }
         public override async Task OnConnectedAsync()
@@ -121,10 +121,5 @@ namespace JWT
         //{
         //    return Clients.User(userId).SendAsync("ReceiveMessages", message);
         //}
-
-
-
-
-
     }
 }

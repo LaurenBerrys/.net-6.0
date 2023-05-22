@@ -62,13 +62,6 @@
 
 //        }
 //        #region 发送短信验证码
-//        /// <summary>
-//        /// 发送短信验证码(单条发送)
-//        /// </summary>
-//        /// <param name="mobile">接收验证码手机号</param>
-//        /// <param name="random">验证码</param>
-//        /// <param name="templateId">短信模板ID</param>
-//        /// <returns></returns>
 //        public static int singleSend(string mobile, string random, int templateId)
 //        {
 //            string appkey = "*****************************"; //配置您申请的appkey
@@ -129,13 +122,6 @@
 //            }
 
 //        }
-//        /// <summary>
-//        /// Http (GET/POST)
-//        /// </summary>
-//        /// <param name="url">请求URL</param>
-//        /// <param name="parameters">请求参数</param>
-//        /// <param name="method">请求方法</param>
-//        /// <returns>响应内容</returns>
 //        static string sendPost(string url, IDictionary<string, string> parameters, string method)
 //        {
 //            if (method.ToLower() == "post")
@@ -187,11 +173,6 @@
 //            }
 //        }
 
-//        /// <summary>
-//        /// 组装普通文本请求参数。
-//        /// </summary>
-//        /// <param name="parameters">Key-Value形式请求参数字典</param>
-//        /// <returns>URL编码后的请求数据</returns>
 //        static string BuildQuery(IDictionary<string, string> parameters, string encode)
 //        {
 //            StringBuilder postData = new StringBuilder();
@@ -228,12 +209,6 @@
 //            return postData.ToString();
 //        }
 
-//        /// <summary>
-//        /// 把响应流转换为文本。
-//        /// </summary>
-//        /// <param name="rsp">响应流对象</param>
-//        /// <param name="encoding">编码方式</param>
-//        /// <returns>响应文本</returns>
 //        static string GetResponseAsString(HttpWebResponse rsp, Encoding encoding)
 //        {
 //            System.IO.Stream stream = null;

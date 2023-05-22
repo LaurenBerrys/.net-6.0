@@ -12,15 +12,6 @@ namespace EveroneAPI.Comoon
     /// </summary>
     public class ExcelHelper
     {
-        /// <summary>
-        /// 根据List数据集合导出Excel，返回文件路径
-        /// </summary>
-        /// <typeparam name="T">类型</typeparam>
-        /// <param name="dataList">数据集合</param>
-        /// <param name="FileName">文件名</param>
-        /// <param name="dic">列名中英文对照表</param>
-        /// <param name="typeDic">特殊类型列名对照表</param>
-        /// <returns></returns>
         //public static string GetExcel<T>(List<T> dataList, string FileName, Dictionary<string, string> dic, Dictionary<string, SpecialType> typeDic)
         //{
         //    string path = GetFilePaht(FileName);
@@ -345,12 +336,6 @@ namespace EveroneAPI.Comoon
             返修类型 = 7,
             测漏结果 = 8,
         }
-        /// <summary>
-        /// 将Excel中的数据导入到数据库中
-        /// </summary>
-        /// <param name="path">Excel文件路径</param>
-        /// <param name="dic">中文列名与英文列名的对应关系</param>
-        /// <param name="typeDic">特殊类型列名对应关系</param>
         //public static List<T> ExcelDataInput<T>(string path, Dictionary<string, string> dic, Dictionary<string, SpecialType> typeDic) where T : class, new()
         //{
         //    //using (ExcelPackage package = new ExcelPackage(new FileInfo(path)))

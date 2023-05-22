@@ -5,6 +5,7 @@ using EveroneAPI.jwt;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,6 +14,7 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.IO;
 using System.Reflection;
+using MySql.Data.EntityFrameworkCore.Extensions;
 
 namespace JWT
 {
@@ -33,7 +35,6 @@ namespace JWT
             {
                 options.AddPolicy(
                     "any", set => { set.SetIsOriginAllowed(origin => true).AllowAnyHeader().AllowAnyMethod().AllowCredentials(); }
-
                     /*"any",*/
                     //builder => builder.AllowAnyOrigin()
                     //.AllowAnyHeader()
@@ -63,6 +64,7 @@ namespace JWT
             #region Swagger
             services.AddSwaggerGen(c =>
             {
+                
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
@@ -77,7 +79,14 @@ namespace JWT
             });
             #endregion
             services.AddDbContext<ContextDBs>(
-              opt => opt.UseSqlServer(Configuration.GetConnectionString("sql")));
+               //opt => 
+            //opt => opt.UseMySql(Configuration.GetConnectionString("mysql"), ServerVersion.AutoDetect(connStr), null)
+            opt => {
+                string connStr = Configuration.GetConnectionString("mysql");
+                opt.UseMySql(connStr, ServerVersion.AutoDetect(connStr), null);
+                //opt.UseSqlServer(Configuration.GetConnectionString("sql")));
+                }
+                );
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -97,7 +106,7 @@ namespace JWT
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Web App v1");
                 c.RoutePrefix = string.Empty;
-                    c.DefaultModelsExpandDepth(-1);
+                c.DefaultModelsExpandDepth(-1);
             });
             app.UseEndpoints(endpoints =>
             {
@@ -105,6 +114,19 @@ namespace JWT
                 endpoints.MapControllers();
 
             });
+            using (var scope = app.ApplicationServices.CreateScope())
+            {
+                var dbContext = scope.ServiceProvider.GetService<ContextDBs>();
+                if (dbContext.Database.EnsureCreated())
+                {
+                    dbContext.Database.EnsureCreated();
+                }
+                else
+                {
+                    dbContext.Database.Migrate();
+                }
+            }
+
         }
     }
 }

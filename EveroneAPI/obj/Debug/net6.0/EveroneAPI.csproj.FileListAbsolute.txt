@@ -161,7 +161,12 @@
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/EveroneAPI.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/EveroneAPI.pdb
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/EveroneAPI.xml
+/Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/BouncyCastle.Crypto.dll
+/Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Google.Protobuf.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Humanizer.dll
+/Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/K4os.Compression.LZ4.dll
+/Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/K4os.Compression.LZ4.Streams.dll
+/Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/K4os.Hash.xxHash.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/MessagePack.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/MessagePack.Annotations.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
@@ -193,6 +198,7 @@
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Microsoft.EntityFrameworkCore.Design.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Microsoft.EntityFrameworkCore.Relational.Design.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Microsoft.EntityFrameworkCore.Sqlite.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Microsoft.EntityFrameworkCore.SqlServer.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Microsoft.Extensions.Caching.Abstractions.dll
@@ -225,6 +231,11 @@
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Microsoft.Win32.SystemEvents.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Mono.TextTemplating.dll
+/Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/MySql.Data.dll
+/Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Ubiety.Dns.Core.dll
+/Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Zstandard.Net.dll
+/Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/MySql.Data.EntityFrameworkCore.dll
+/Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/MySqlConnector.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Newtonsoft.Json.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/NuGet.Common.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/NuGet.Configuration.dll
@@ -235,10 +246,14 @@
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/NuGet.ProjectModel.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/NuGet.Protocol.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/NuGet.Versioning.dll
+/Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Pomelo.EntityFrameworkCore.MySql.dll
+/Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Pomelo.EntityFrameworkCore.MySql.Design.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/QRCoder.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/SQLitePCLRaw.batteries_v2.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/SQLitePCLRaw.core.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll
+/Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Renci.SshNet.dll
+/Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/SshNet.Security.Cryptography.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -259,6 +274,7 @@
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/System.Text.Encodings.Web.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/System.Text.Json.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/System.Windows.Extensions.dll
+/Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/System.Xml.XPath.XmlDocument.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/cs/Microsoft.CodeAnalysis.resources.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/de/Microsoft.CodeAnalysis.resources.dll
 /Users/niechengyong/ProjectCode/NetCore/net-6.0/EveroneAPI/bin/Debug/net6.0/net6.0/es/Microsoft.CodeAnalysis.resources.dll

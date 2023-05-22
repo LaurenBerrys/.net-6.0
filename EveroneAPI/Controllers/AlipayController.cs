@@ -13,6 +13,5 @@ namespace EveroneAPI.Controllers
     public class AlipayController : ControllerBase
     {
 
- 
     }
 }
